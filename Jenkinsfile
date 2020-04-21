@@ -2,7 +2,7 @@
 
 stage('Checkout'){
 echo "checking out code"
-          checkout scm
+        //  checkout scm
 
        }
 
