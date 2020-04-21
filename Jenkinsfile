@@ -1,14 +1,16 @@
-#!groovy
+pipeline {
+    agent any
 
-stage('Checkout'){
-echo "checking out code"
-        //  checkout scm
-
-       }
-
-       stage('Test'){
-
-         echo "running test" 
-       }
-
-       
+    stages {
+        stage('Code Checkout') {
+            steps {
+                //ws('D:\\Jenkins') {
+               // sh 'make' 
+                //archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+                echo "Checking out code"
+                checkout scm
+            //}
+            }
+        }
+    }
+}
