@@ -1,9 +1,9 @@
 #!groovy
 
 stage('Checkout'){
-
-          //checkout scm
 echo "checking out code"
+          checkout scm
+
        }
 
        stage('Test'){
